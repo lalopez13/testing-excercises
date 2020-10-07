@@ -6,6 +6,10 @@ workflows:
     jobs:
       - node/test
       version: 14.2.0
+      build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node@3.0.0
     steps:
     - checkout
     - run: npm install 
